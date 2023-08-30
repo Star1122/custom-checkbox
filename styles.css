@@ -1,0 +1,49 @@
+.custom-checkboxs-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* The custom-checkbox */
+.custom-checkbox {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-checkbox input.native-checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: white;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: black;
+    color: white;
+}
+
+.custom-checkbox input:focus-visible ~ .checkmark {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
